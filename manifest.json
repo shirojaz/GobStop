@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Shirojaz Meet OBS Stopper",
-  "version": "6.9",
+  "name": "GobStop: GMeet OBS Stopper",
+  "version": "1.0",
   "description": "Stops OBS stream when a Google Meet ends.",
   "permissions": [
     "tabs",

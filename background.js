@@ -1,6 +1,4 @@
-// Combined background service worker: proper OBS WebSocket v5+ auth + notifications
-// Password: OQiqY2mJCEFvlt3R
-const OBS_PASSWORD = "OQiqY2mJCEFvlt3R";
+const OBS_PASSWORD = "";
 const OBS_WS_URL = "ws://localhost:4455";
 
 chrome.runtime.onMessage.addListener((msg) => {
@@ -62,7 +60,7 @@ async function stopObsStream() {
             chrome.notifications.create({
               type: "basic",
               iconUrl: "icon128.png",
-              title: "Shirojaz Meet OBS Stopper",
+              title: "GobStop",
               message: "OBS stream stopped successfully ✅"
             });
             console.log("[Meet OBS] Stream stopped successfully");
@@ -88,7 +86,7 @@ async function stopObsStream() {
       chrome.notifications.create({
         type: "basic",
         iconUrl: "icon128.png",
-        title: "Shirojaz Meet OBS Stopper",
+        title: "GobStop",
         message: "Could not connect to OBS WebSocket ❌"
       });
     };
