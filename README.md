@@ -27,7 +27,7 @@ Built for clean integration with [OBS WebSocket v5+](https://github.com/obsproje
 2. In Chrome, go to `chrome://extensions/`.
 3. Enable **Developer mode**.
 4. Click **Load unpacked** and select the project folder.
-5. You should now see *Shirojaz Meet OBS Stopper* in your extensions bar.
+5. You should now see *GobStop: GMeet OBS Stopper* in your extensions bar.
 
 ---
 
