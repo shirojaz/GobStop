@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GobStop: GMeet OBS Stopper</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial; margin: 12px; width:300px; }
+    h1 { font-size:14px; margin:0 0 8px 0; }
+    label { display:block; font-size:12px; margin-top:8px; }
+    input[type="text"], input[type="password"] { width:100%; padding:6px 8px; box-sizing:border-box; margin-top:4px; border-radius:6px; border:1px solid #ccc; }
+    .row { display:flex; gap:8px; margin-top:10px; }
+    button { flex:1; padding:8px 10px; border-radius:6px; border:0; background:#2d8cff; color:white; cursor:pointer; }
+    button.secondary { background:#f1f3f4; color:#222; border:1px solid #d0d0d0; }
+    #status { margin-top:10px; font-size:12px; min-height:20px; }
+    .small { font-size:11px; color:#666; margin-top:6px; }
+  </style>
+</head>
+<body>
+  <h1>GobStop: GMeet OBS Stopper</h1>
+  <label>OBS Host
+    <input id="obsHost" type="text" placeholder="ws://localhost:4455" />
+  </label>
+  <label>OBS Password
+    <input id="obsPassword" type="password" placeholder="(optional)" />
+  </label>
+  <div class="row">
+    <button id="saveBtn">Save</button>
+    <button id="testBtn" class="secondary">Test Connection</button>
+  </div>
+  <div id="status"></div>
+  <div class="small">made by shirojaz</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
