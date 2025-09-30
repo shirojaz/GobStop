@@ -1,67 +1,35 @@
-# GobStop: Gmeet-OBS-Stopper
+# GobStop: Gmeet OBS Stopper
+## Why
+**GobStop** is a Chrome extension that scratches a very specific itch:
+I use Google Meet for online classes, and I stream them through OBS to keep my own recordings. The problem? Sometimes I’d forget to stop the OBS stream after class ended, leaving hours of useless footage on YouTube.
 
-Stops your OBS livestream automatically when a Google Meet ends.  
-Now with a popup to configure OBS connection settings and test them directly.
-
----
-
-## Features
-- Detects when you leave or get auto-booted from a Google Meet.
-- Sends a `StopStream` request to OBS via WebSocket.
-- **Popup configuration**:
-  - Set custom OBS WebSocket host (default: `ws://localhost:4455`)
-  - Set OBS password (if enabled in OBS)
-  - Save settings to Chrome Sync (works across devices)
-- **Test Connection** button to quickly check if OBS is reachable and auth works.
-- Notifications for success/failure when attempting to stop a stream.
+GobStop fixes that tiny but annoying problem. It’s just a small automation that saves me from myself.  
 
 ---
 
-## Installation
-1. Download and unzip this repo (or clone it).
-2. Open Chrome and go to `chrome://extensions/`.
-3. Enable **Developer mode** (toggle in top right).
-4. Click **Load unpacked** and select the project folder.
-5. The extension will appear in your toolbar.
+## Features  
+- **OBS WebSocket integration** – cleanly stops a live stream when Meet ends.  
+- **Automatic Meet detection** – hooks into the Meet tab and knows when you’ve left.  
+- **No false positives** – if OBS isn’t streaming, the extension stays quiet.  
+- **Custom icons + clean manifest** – because if you’re gonna hack, at least make it look nice.  
 
 ---
 
-## Usage
-1. Click the extension icon in Chrome.
-2. Enter your OBS WebSocket host + password, then click **Save**.
-3. (Optional) Use **Test Connection** to verify OBS is reachable.
-4. Join a Google Meet. When the meeting ends, OBS stream will automatically stop.
-5. You’ll get a Chrome notification when the stop request succeeds or fails.
+## Installation  
+1. Clone or download this repo.  
+2. Open **Chrome → Extensions → Manage Extensions**.  
+3. Enable **Developer mode**.  
+4. Click **Load unpacked** and select this folder.  
+5. Make sure OBS is running with the WebSocket plugin enabled (`localhost:4455` by default).  
+6. Join a Google Meet, then leave — GobStop will stop your OBS stream automatically.  
 
 ---
 
-## Roadmap
-Planned improvements:
-- **Auto-start OBS stream** when a Meet begins.
-- **Logging panel** in the extension popup for recent events.
-- **Optional toggle** to enable/disable auto-stop without uninstalling.
+## Contributing  
+This is mostly a personal workflow hack, but feel free to fork and mess with it.  
+Open issues or PRs if you want to add features, fix bugs, or just make it cleaner.  
 
 ---
 
-## Requirements
-- OBS Studio with **obs-websocket** plugin (v5 or newer).
-- OBS WebSocket must be enabled and accessible at the configured host/port.
-- Chrome-based browser (tested on latest Chrome).
-
----
-
-## Version History
-- **v2.0**  
-  - Added popup UI for OBS host/password configuration.  
-  - Added **Test Connection** button.  
-  - Credentials stored via `chrome.storage.sync`.  
-  - Background script updated to use stored config.  
-- **v1.0**  
-  - Initial release.  
-  - Hardcoded OBS host/password.  
-  - Stopped stream on Meet leave only.
-
----
-
-## License
-MIT License
+## License  
+MIT — do whatever, just don’t blame me if your stream cuts mid-meeting.  
