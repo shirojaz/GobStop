@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Shirojaz Meet OBS Stopper",
+  "version": "6.9",
+  "description": "Stops OBS stream when a Google Meet ends.",
+  "permissions": [
+    "tabs",
+    "scripting",
+    "notifications"
+  ],
+  "host_permissions": [
+    "https://meet.google.com/*",
+    "ws://localhost:4455/",
+    "wss://localhost:4455/"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://meet.google.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
